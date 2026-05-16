@@ -5,7 +5,7 @@ ENV CONTEXT_SIZE=8192
 ENV MODEL_REPO=TrevorJS/gemma-4-31B-it-uncensored-GGUF
 ENV MODEL_QUANT=Q4_K_M
 
-CMD llama-server \
+CMD /app/llama-server \
   -hf ${MODEL_REPO}:${MODEL_QUANT} \
   --host 0.0.0.0 \
   --port ${PORT:-8080} \
